@@ -400,7 +400,7 @@ internal extension SKPhotoBrowser {
                 return 15
             }
         }()
-        return view.bounds.divided(atDistance: 44, from: .maxYEdge).slice.offsetBy(dx: 0, dy: -offset)
+        return view.bounds.divided(atDistance: 44, from: .maxYEdge).slice.offsetBy(dx: UIDevice.current.orientation.isLandscape ? -60 : 0, dy: -offset)
     }
     
     func frameForToolbarHideAtOrientation() -> CGRect {
